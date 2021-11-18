@@ -25,13 +25,13 @@ Contraseña:
 
 1. archivoBase - Contiene el archivo .html con la estructura básica del formulario. La idea es que el estudiante complete la función validar() 
 con código JavaScript para efectuar las validaciones requeridas en el ejercicio.
-
 2. ejercicioResuelto - Contiene el archivo html con el ejercicio ya resuelto, en dado caso de que el estudiante tenga alguna duda al implementar la función.
+3. presentacion_PPT - Contiene la presentación con una introducción al lenguaje JavaScript y la explicación del ejercicio.
 
 Se pueden también contultar las siguientes fuentes para resolver dudas con respecto al ejercicio:
   
-  Learn JavaScript - Full Course for Beginners: https://youtu.be/PkZNo7MFNFg 
-  Login form validation using javascript: https://www.youtube.com/watch?v=NyM4MCX2eIo
+1. Learn JavaScript Full Course for Beginners: https://youtu.be/PkZNo7MFNFg 
+2. Login form validation using javascript: https://www.youtube.com/watch?v=NyM4MCX2eIo
   
 
 
