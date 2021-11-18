@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <script language="javascript">
+            // Esta es la función que efectúa el proceso de validación para el
+            // usuario y la constraseña.
+
+            function validar(){
+
+                // Se asignan las variables user y pass que reciben los datos
+                // ingresados por el usuario.
+                var user = document.f1.username.value;
+                var pass = document.f1.pass.value;
+
+                //Se valida que el usuario no sea un string vació o de menos de
+                // 8 caracteres.
+                if(user == "" || user.length < 9){
+                    alert("Por favor ingrese un nombre de usuario de más de 8 caracteres.");
+                    return false;
+                }
+
+                /* Mediante el uso de un ciclo for, se verifica que ninguno de los
+                 * caracteres infresados por el usuario corresponda a un espacio en
+                 * blanco. Para esto, se inicializa una variable bandera que sirve como 
+                 * indicador para espacios en blanco dentro del string */
+
+                var espacio = 0;
+
+                for(let i = 0; i< user.length; i++){
+                    ch = user.charAt(i);
+                    if(ch == ' '){ 
+                        espacio = 1
+                        return false;
+                    }
+                }
+                if(espacio == 1){
+                    alert("Por favor ingrese un nombre de usuario sin espacios");
+                    return false;
+                }
+
+                //Se valida que la contraseña no sea un string vació o de menos de
+                // 8 caracteres.
+                if(pass == ""|| pass.length < 9){
+                    alert("Por favor ingrese una contraseña de más de 8 caracteres.");
+                    return false;
+                }
+
+                //Se crea una expresión regular para el alfabeto de mayúsculas y minúsculas
+                alfabeto = /[a-z A-Z]/;
+
+                //Se crea una expresión regular para los dígitos del 0 al 9
+                digitos = /[0-9]/;
+
+                /* Mediante una estructura de control if se verifica que la contraseña
+                 * contenga al menos un caracter del alfabeto y un dígito. Para este caso
+                 * también se utiliza una variable bandera ""*/
+                
+                 var alfadigitos = 0; //Variable bandera
+
+                if(pass.match(alfabeto) && pass.match(digitos)){
+                   alfadigitos =1; 
+
+                }
+                if(alfadigitos==0){
+                    alert("Por favor introduzca al menos una letra del alfabeto y un dígito");
+                    return false;
+                }
+                
+                //En el caso de que pase todas las validaciones,
+                alert("Validación exitosa");
+                return true;
+                
+            }
+
+        </script>
+    </head>
+    <body>
+        <form name="f1" action="" onsubmit="validar();">
+            <center>
+            <h2>Formulario de Validación de Inicio de Sesión Usando JavaScript<h2>
+            Usuario: <input type="text" name="username" value=""><br>
+            Contraseña <input type="password" name="pass" value=""><br>
+            <input type="submit" name="submit" value="Ingresar"><br>
+            </center>
+        </form>
+    </body>    
