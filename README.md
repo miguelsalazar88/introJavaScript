@@ -21,7 +21,7 @@ Contraseña:
 3. Mínimo un dígito (0 al 9)
 
 
-# En este repositorio se encontrarán dos ficheros: 
+# En este repositorio se encontrarán 3 ficheros: 
 
 1. archivoBase - Contiene el archivo .html con la estructura básica del formulario. La idea es que el estudiante complete la función validar() 
 con código JavaScript para efectuar las validaciones requeridas en el ejercicio.
